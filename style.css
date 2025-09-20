@@ -1,0 +1,29 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  direction: rtl;
+}
+
+#track {
+  position: relative;
+  height: 100px;
+  margin: 20px;
+  background: #ddd;
+  border-radius: 20px;
+}
+
+#runner {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  font-size: 2rem;
+  transition: left 0.3s ease;
+}
+
+#finish {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-size: 2rem;
+}
