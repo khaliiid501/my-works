@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>رحلة نحو الذات والوجود</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+    .quote {
+      font-style: italic;
+      color: #aaa;
+      border-right: 4px solid #ffd700;
+      padding-right: 15px;
+      margin: 20px 0;
+    }
+    .audio-player {
+      text-align: center;
+      margin-top: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>رحلة نحو الذات والوجود</h1>
+    <p>تأملات، أدوات، وأسئلة تعيد تشكيل علاقتك مع الحياة</p>
+  </header>
+
+  <section>
+    <h2>من نحن؟</h2>
+    <p>هذه الصفحة ليست مجرد محتوى، بل دعوة للتأمل، للنمو، ولإعادة اكتشاف الذات في ضوء الأسئلة الوجودية.</p>
+    <div class="quote">"الوعي بالذات هو أول خطوة نحو الحرية." – كيركغارد</div>
+  </section>
+
+  <section>
+    <h2>أدوات تنمية الذات</h2>
+    <ul>
+      <li>تمارين تأمل يومية</li>
+      <li>خرائط ذهنية لفهم المشاعر</li>
+      <li>مقالات قصيرة عن الوعي والمعنى</li>
+      <li>أوراق عمل قابلة للتحميل</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>تأملات في الوجود</h2>
+    <p>هل نحن نختار أم نُقاد؟ ما هو الزمن؟ كيف تعكس اللغة وعينا؟ هذه الأسئلة ليست للجدل، بل للغوص في عمق الذات.</p>
+  </section>
+
+  <section class="audio-player">
+    <h2>🎵 موسيقى تأملية</h2>
+    <p>اضغط لتشغيل موسيقى *Interstellar* (Cornfield Chase)</p>
+    <iframe width="100%" height="80" src="https://www.youtube.com/embed/UqLRqzTp6Rk?autoplay=0&loop=1&playlist=UqLRqzTp6Rk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 رحلة نحو الذات | تصميم: imor11
+  </footer>
+
+</body>
+</html>
