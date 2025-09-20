@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نماذج اختبار القدرات - قياس</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+        }
+        button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .correct {
+            color: #27ae60;
+        }
+        .incorrect {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>نماذج اختبار القدرات - قياس</h1>
+        <div id="questionContainer"></div>
+        <button onclick="generateQuestion()">توليد سؤال جديد</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const questionTypes = {
+            math: [
+                {
+                    question: "إذا كان س + ٢ = ٥، فما قيمة س؟",
+                    options: ["٢", "٣", "٤", "٥"],
+                    correct: 1
+                },
+                {
+                    question: "ما ناتج ٨ × ٧ + ٣؟",
+                    options: ["٥٩", "٥٦", "٦٢", "٥٣"],
+                    correct: 0
+                },
+                {
+                    question: "إذا كان محيط مربع ١٦ سم، فما طول ضلعه؟",
+                    options: ["٢ سم", "٤ سم", "٨ سم", "١٦ سم"],
+                    correct: 1
+                }
+            ],
+            verbal: [
+                {
+                    question: "ما هو مرادف كلمة 'وجل'؟",
+                    options: ["خوف", "شجاعة", "فرح", "غضب"],
+                    correct: 0
+                },
+                {
+                    question: "ما هو جمع كلمة 'قلم'؟",
+                    options: ["قلمون", "أقلام", "قلمات", "قلائم"],
+                    correct: 1
+                },
+                {
+                    question: "ما هو ضد كلمة 'سخي'؟",
+                    options: ["كريم", "شجاع", "بخيل", "قوي"],
+                    correct: 2
+                }
+            ]
+        };
+
+        let currentQuestion = null;
+
+        function generateQuestion() {
+            const types = Object.keys(questionTypes);
+            const randomType = types[Math.floor(Math.random() * types.length)];
+            const questions = questionTypes[randomType];
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            
+            currentQuestion = questions[randomIndex];
+            
+            const container = document.getElementById('questionContainer');
+            const optionsHtml = currentQuestion.options.map((option, index) => 
+                `<div class="option" onclick="checkAnswer(${index})">${option}</div>`
+            ).join('');
+
+            container.innerHTML = `
+                <div class="question">
+                    <h3>${currentQuestion.question}</h3>
+                    <div class="options">
+                        ${optionsHtml}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('result').innerHTML = '';
+        }
+
+        function checkAnswer(selectedIndex) {
+            const resultDiv = document.getElementById('result');
+            if (selectedIndex === currentQuestion.correct) {
+                resultDiv.innerHTML = '<span class="correct">إجابة صحيحة! أحسنت!</span>';
+            } else {
+                resultDiv.innerHTML = `<span class="incorrect">إجابة خاطئة. الإجابة الصحيحة هي: ${currentQuestion.options[currentQuestion.correct]}</span>`;
+            }
+        }
+
+        // توليد سؤال عند تحميل الصفحة
+        generateQuestion();
+    </script>
+</body>
+</html>
