@@ -1,0 +1,46 @@
+:root{
+  --bg:#0b1020;
+  --card:#12172a;
+  --text:#e7ecff;
+  --muted:#a9b4d6;
+  --brand:#6aa9ff;
+  --accent:#ffd166;
+  --border:#223055;
+  --ok:#2ecc71;
+  --warn:#ff9f43;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans Arabic",Tahoma,Arial,sans-serif}
+.container{width:min(1100px,92%);margin:0 auto}
+.header{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#8ad3ff);display:grid;place-items:center;color:#001330;font-weight:800}
+.brand-text h1{margin:0;font-size:1.25rem}
+.brand-text p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.nav a{color:var(--text);text-decoration:none;margin-inline:8px;padding:6px 10px;border-radius:8px}
+.nav a:hover{background:#0f1733}
+.hero{background:linear-gradient(180deg,#0d183a00,#0d183a66);padding:24px;border:1px solid var(--border);border-radius:16px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:var(--brand);color:#071022;border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn.primary{box-shadow:0 6px 20px #6aa9ff3a}
+.btn.subtle{background:#1a2342;color:#d7e4ff}
+.btn:hover{opacity:.95}
+.section{margin:28px 0}
+.section h3{margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.grid.two{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px}
+.card h4{margin:0 0 8px}
+label{display:block;margin:10px 0 6px;color:var(--muted);font-size:.9rem}
+input,textarea{width:100%;background:#0d1430;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px;outline:none}
+textarea.mono,pre.mono,code.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+.row-actions{display:flex;gap:8px;margin-top:8px}
+.info{background:#0f1a35;border:1px dashed var(--border);padding:12px;border-radius:12px;color:#c8d4ff}
+.small{font-size:.9rem;color:var(--muted)}
+.code-card{background:var(--card);border:1px solid var(--border);border-radius:14px;margin:12px 0}
+.code-card-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);padding:12px 14px}
+.code{margin:0;padding:14px;overflow:auto;max-height:420px}
+.footer{padding:22px 0;border-top:1px solid var(--border);margin-top:22px;color:#bcd1ff}
+details{border:1px solid var(--border);border-radius:12px;padding:10px;margin-top:8px;background:#0d1430}
+details summary{cursor:pointer;color:#d7e4ff}
+.hero p{max-width:60ch}
